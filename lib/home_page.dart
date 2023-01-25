@@ -15,12 +15,10 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            child: const Icon(
-              Icons.add,
-            ),
+            child: const Text('1'),
             onPressed: () {
               context.read<CounterBloc>().add(
-                    AddNumber(),
+                    AddNumber(100),
                   );
             },
           ),
@@ -28,18 +26,16 @@ class HomePage extends StatelessWidget {
             height: 10,
           ),
           FloatingActionButton(
-            child: const Icon(
-              Icons.remove,
-            ),
+            child: const Text('-10'),
             onPressed: () {
               context.read<CounterBloc>().add(
-                    SubstractNumber(),
+                    AddNumber(-10),
                   );
             },
           ),
         ],
       ),
-      body: BlocBuilder<CounterBloc, CounterLoaded>(
+      body: BlocBuilder<CounterBloc, CounterState>(
         builder: (context, state) {
           return Center(
             child: Text(

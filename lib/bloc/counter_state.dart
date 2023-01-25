@@ -1,8 +1,7 @@
 part of 'counter_bloc.dart';
 
-
-class CounterLoaded {
+class CounterState {
   final int numberOnScreen;
 
-  CounterLoaded(this.numberOnScreen);
+  CounterState(this.numberOnScreen);
 }

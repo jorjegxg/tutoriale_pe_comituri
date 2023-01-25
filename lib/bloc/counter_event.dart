@@ -3,6 +3,8 @@ part of 'counter_bloc.dart';
 @immutable
 abstract class CounterEvent {}
 
-class AddNumber extends CounterEvent{}
+class AddNumber extends CounterEvent {
+  final int numberToAdd;
 
-class SubstractNumber extends CounterEvent{}
+  AddNumber(this.numberToAdd);
+}
